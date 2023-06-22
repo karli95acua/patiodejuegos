@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patio de juegos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css') }}">
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1>¡Bienvenidos!</h1>
+        <span class="sugerencias1"style="color: {{ color }};">
+            sugerencias de color (escribe tu favorito en la ruta!):
+            hotpink - palegoldenrod - orchid - teal - skyblue - lightcoral - tomato - moccasin - thistle - plum - indigo -limegreen - darkcyan - steelblue - navy - rosybrown - silver - black
+        </span>
+        <div class="container-box">
+            {% for _ in range(num1) %}
+            <div class="box" style="background-color: {{ color }};"></div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+
+</html>
